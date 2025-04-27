@@ -1,5 +1,4 @@
 import logo from './logo.svg'
-import logo_dark from './logo_dark.svg'
 import search_icon from './search_icon.svg'
 import cross_icon from './cross_icon.svg'
 import upload_area from './upload_area.svg'
@@ -66,7 +65,6 @@ export const assets = {
     dropdown_icon,
     cross_icon,
     upload_area,
-    logo_dark,
     down_arrow_icon,
     time_left_clock_icon,
     time_clock_icon,
@@ -214,22 +212,22 @@ export const dummyStudentEnrolled = [
 export const dummyCourses = [
     {
         "_id": "605c72efb3f1c2b1f8e4e1a1",
-        "courseTitle": "Introduction to JavaScript",
-        "courseDescription": "<h2>Learn the Basics of JavaScript</h2><p>JavaScript is a versatile programming language that powers the web. In this course, you will learn the fundamentals of JavaScript, including syntax, data types, and control structures.</p><p>This course is perfect for beginners who want to start their journey in web development. By the end of this course, you will be able to create interactive web pages and understand the core concepts of JavaScript.</p><ul><li>Understand the basics of programming</li><li>Learn how to manipulate the DOM</li><li>Create dynamic web applications</li></ul>",
-        "coursePrice": 49.99,
+        "courseTitle": "Introduction to Python",
+        "courseDescription": "<h2>Learn the Basics of python</h2><p>python is a versatile programming language that powers the web. In this course, you will learn the fundamentals of python, including syntax, data types, and control structures.</p><p>This course is perfect for beginners who want to start their journey in web development. By the end of this course, you will be able to create interactive web pages and understand the core concepts of python.</p><ul><li>Understand the basics of programming</li><li>Learn how to manipulate the DOM</li><li>Create dynamic web applications</li></ul>",
+        "coursePrice": 40,
         "isPublished": true,
         "discount": 20,
         "courseContent": [
             {
                 "chapterId": "chapter1",
                 "chapterOrder": 1,
-                "chapterTitle": "Getting Started with JavaScript",
+                "chapterTitle": "Getting Started with python",
                 "chapterContent": [
                     {
                         "lectureId": "lecture1",
-                        "lectureTitle": "What is JavaScript?",
+                        "lectureTitle": "What is python?",
                         "lectureDuration": 16,
-                        "lectureUrl": "https://youtu.be/CBWnBi-awSA",
+                        "lectureUrl": "#",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -237,7 +235,7 @@ export const dummyCourses = [
                         "lectureId": "lecture2",
                         "lectureTitle": "Setting Up Your Environment",
                         "lectureDuration": 19,
-                        "lectureUrl": "https://youtu.be/4l87c2aeB4I",
+                        "lectureUrl": "##",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -252,15 +250,15 @@ export const dummyCourses = [
                         "lectureId": "lecture3",
                         "lectureTitle": "Understanding Variables",
                         "lectureDuration": 20,
-                        "lectureUrl": "https://youtu.be/pZQeBJsGoDQ",
+                        "lectureUrl": "#",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
                     {
                         "lectureId": "lecture4",
-                        "lectureTitle": "Data Types in JavaScript",
+                        "lectureTitle": "Data Types in python",
                         "lectureDuration": 10,
-                        "lectureUrl": "https://youtu.be/ufHT2WEkkC4",
+                        "lectureUrl": "#",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -283,7 +281,7 @@ export const dummyCourses = [
         "createdAt": "2024-12-17T08:16:53.622Z",
         "updatedAt": "2025-01-02T04:47:44.701Z",
         "__v": 4,
-        "courseThumbnail": "https://img.youtube.com/vi/CBWnBi-awSA/maxresdefault.jpg"
+        "courseThumbnail": "#######"
     },
     {
         "_id": "675ac1512100b91a6d9b8b24",
@@ -302,7 +300,7 @@ export const dummyCourses = [
                         "lectureId": " lecture1",
                         "lectureTitle": "Lists and Tuples",
                         "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -310,7 +308,7 @@ export const dummyCourses = [
                         "lectureId": "lecture2",
                         "lectureTitle": "Dictionaries and Sets",
                         "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureUrl": "##",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -325,7 +323,7 @@ export const dummyCourses = [
                         "lectureId": "lecture3",
                         "lectureTitle": "Classes and Objects",
                         "lectureDuration": 900,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -333,7 +331,7 @@ export const dummyCourses = [
                         "lectureId": "lecture4",
                         "lectureTitle": "Inheritance and Polymorphism",
                         "lectureDuration": 950,
-                        "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -355,7 +353,7 @@ export const dummyCourses = [
         "createdAt": "2024-12-17T08:16:53.622Z",
         "updatedAt": "2025-01-02T06:47:54.446Z",
         "__v": 3,
-        "courseThumbnail": "https://img.youtube.com/vi/HdLIMoQkXFA/maxresdefault.jpg"
+        "courseThumbnail": "###"
     },
     {
         "_id": "605c72efb3f1c2b1f8e4e1ae",
@@ -374,7 +372,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Cybersecurity?",
                         "lectureDuration": 10,
-                        "lectureUrl": "https://youtu.be/samplelink5",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -382,7 +380,7 @@ export const dummyCourses = [
                         "lectureId": "lecture2",
                         "lectureTitle": "Types of Cyber Threats",
                         "lectureDuration": 18,
-                        "lectureUrl": "https://youtu.be/samplelink6",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -397,7 +395,7 @@ export const dummyCourses = [
                         "lectureId": "lecture3",
                         "lectureTitle": "Password Management",
                         "lectureDuration": 15,
-                        "lectureUrl": "https://youtu.be/samplelink7",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -405,7 +403,7 @@ export const dummyCourses = [
                         "lectureId": "lecture4",
                         "lectureTitle": "Network Security Essentials",
                         "lectureDuration": 20,
-                        "lectureUrl": "https://youtu.be/samplelink8",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -421,7 +419,7 @@ export const dummyCourses = [
         "createdAt": "2024-12-27T11:30:00.000Z",
         "updatedAt": "2024-12-31T04:14:49.773Z",
         "__v": 2,
-        "courseThumbnail": "https://img.youtube.com/vi/jZFaMEqEqEQ/maxresdefault.jpg"
+        "courseThumbnail": "###"
     },
     {
         "_id": "605c72efb3f1c2b1f8e4e1a7",
@@ -440,7 +438,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "Introduction to HTML",
                         "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -448,7 +446,7 @@ export const dummyCourses = [
                         "lectureId": "lecture2",
                         "lectureTitle": "Styling with CSS",
                         "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "##",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -463,7 +461,7 @@ export const dummyCourses = [
                         "lectureId": "lecture3",
                         "lectureTitle": "JavaScript Basics",
                         "lectureDuration": 800,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -471,7 +469,7 @@ export const dummyCourses = [
                         "lectureId": "lecture4",
                         "lectureTitle": "DOM Manipulation",
                         "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -487,7 +485,7 @@ export const dummyCourses = [
         "createdAt": "2024-12-17T08:16:53.622Z",
         "updatedAt": "2024-12-31T05:31:27.290Z",
         "__v": 2,
-        "courseThumbnail": "https://img.youtube.com/vi/lpx2zFkapIk/maxresdefault.jpg"
+        "courseThumbnail": "###"
     },
     {
         "_id": "605c72efb3f1c2b1f8e4e1ac",
@@ -506,7 +504,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "What is Cloud Computing?",
                         "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "@###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -514,7 +512,7 @@ export const dummyCourses = [
                         "lectureId": "lecture2",
                         "lectureTitle": "Cloud Service Models",
                         "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -529,7 +527,7 @@ export const dummyCourses = [
                         "lectureId": "lecture3",
                         "lectureTitle": "AWS Basics",
                         "lectureDuration": 800,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -537,7 +535,7 @@ export const dummyCourses = [
                         "lectureId": "lecture4",
                         "lectureTitle": "Introduction to Google Cloud",
                         "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
+                        "lectureUrl": "h###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -552,7 +550,7 @@ export const dummyCourses = [
         "createdAt": "2024-12-17T08:16:53.622Z",
         "updatedAt": "2024-12-31T05:32:55.357Z",
         "__v": 1,
-        "courseThumbnail": "https://img.youtube.com/vi/0yboGn8errU/maxresdefault.jpg"
+        "courseThumbnail": "###"
     },
     {
         "_id": "605c72efb3f1c2b1f8e4e1ad",
@@ -571,7 +569,7 @@ export const dummyCourses = [
                         "lectureId": "lecture1",
                         "lectureTitle": "Python Basics",
                         "lectureDuration": 30,
-                        "lectureUrl": "https://youtu.be/samplelink1",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -579,7 +577,7 @@ export const dummyCourses = [
                         "lectureId": "lecture2",
                         "lectureTitle": "Working with NumPy",
                         "lectureDuration": 25,
-                        "lectureUrl": "https://youtu.be/samplelink2",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -594,7 +592,7 @@ export const dummyCourses = [
                         "lectureId": "lecture3",
                         "lectureTitle": "Introduction to Matplotlib",
                         "lectureDuration": 20,
-                        "lectureUrl": "https://youtu.be/samplelink3",
+                        "lectureUrl": "###",
                         "isPreviewFree": true,
                         "lectureOrder": 1
                     },
@@ -602,7 +600,7 @@ export const dummyCourses = [
                         "lectureId": "lecture4",
                         "lectureTitle": "Advanced Visualizations with Seaborn",
                         "lectureDuration": 25,
-                        "lectureUrl": "https://youtu.be/samplelink4",
+                        "lectureUrl": "###",
                         "isPreviewFree": false,
                         "lectureOrder": 2
                     }
@@ -625,136 +623,7 @@ export const dummyCourses = [
         "createdAt": "2024-12-27T10:00:00.000Z",
         "updatedAt": "2024-12-31T09:57:48.992Z",
         "__v": 3,
-        "courseThumbnail": "https://img.youtube.com/vi/E4znbZgUWzA/maxresdefault.jpg"
+        "courseThumbnail": "###"
     },
-    {
-        "_id": "605c72efb3f1c2b1f8e4e1aa",
-        "courseTitle": "Data Science and Machine Learning",
-        "courseDescription": "<h2>Unlock the Power of Data</h2><p>This course provides a comprehensive introduction to data science and machine learning. You will learn how to analyze data, build predictive models, and apply machine learning algorithms to real-world problems.</p><p>By the end of this course, you will have a solid understanding of data manipulation, visualization, and machine learning techniques, enabling you to make data-driven decisions.</p><ul><li>Understand data analysis and visualization</li><li>Learn machine learning algorithms and their applications</li><li>Work with popular data science libraries like Pandas and Scikit-Learn</li></ul>",
-        "coursePrice": 89.99,
-        "isPublished": true,
-        "discount": 30,
-        "courseContent": [
-            {
-                "chapterId": "chapter1",
-                "chapterOrder": 1,
-                "chapterTitle": "Introduction to Data Science",
-                "chapterContent": [
-                    {
-                        "lectureId": "lecture1",
-                        "lectureTitle": "What is Data Science?",
-                        "lectureDuration": 600,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": true,
-                        "lectureOrder": 1
-                    },
-                    {
-                        "lectureId": "lecture2",
-                        "lectureTitle": "Data Collection and Cleaning",
-                        "lectureDuration": 720,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": false,
-                        "lectureOrder": 2
-                    }
-                ]
-            },
-            {
-                "chapterId": "chapter2",
-                "chapterOrder": 2,
-                "chapterTitle": "Machine Learning Basics",
-                "chapterContent": [
-                    {
-                        "lectureId": "lecture3",
-                        "lectureTitle": "Supervised vs Unsupervised Learning",
-                        "lectureDuration": 800,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": true,
-                        "lectureOrder": 1
-                    },
-                    {
-                        "lectureId": "lecture4",
-                        "lectureTitle": "Building Your First Model",
-                        "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": false,
-                        "lectureOrder": 2
-                    }
-                ]
-            }
-        ],
-        "educator": "675ac1512100b91a6d9b8b24",
-        "enrolledStudents": [
-            "user_2qjlgkAqIMpiR2flWIRzvWKtE0w"
-        ],
-        "courseRatings": [],
-        "createdAt": "2024-12-17T08:16:53.622Z",
-        "updatedAt": "2025-01-02T06:53:59.753Z",
-        "__v": 1,
-        "courseThumbnail": "https://img.youtube.com/vi/631lFJdQvoo/maxresdefault.jpg"
-    },
-    {
-        "_id": "605c72efb3f1c2b1f8e4e1ab",
-        "courseTitle": "Introduction to Cybersecurity",
-        "courseDescription": "<h2>Protect the Digital World</h2><p>This course covers the essentials of cybersecurity, including understanding threats, vulnerabilities, and how to secure systems against cyber-attacks. Ideal for beginners, this course will prepare you for a career in cybersecurity.</p><p>By the end of this course, you will be able to identify and mitigate risks, implement security best practices, and understand the fundamentals of encryption and network security.</p><ul><li>Understand common cybersecurity threats</li><li>Learn about encryption and secure communication</li><li>Explore tools for penetration testing</li></ul>",
-        "coursePrice": 59.99,
-        "isPublished": true,
-        "discount": 15,
-        "courseContent": [
-            {
-                "chapterId": "chapter1",
-                "chapterOrder": 1,
-                "chapterTitle": "Cybersecurity Basics",
-                "chapterContent": [
-                    {
-                        "lectureId": "lecture1",
-                        "lectureTitle": "Introduction to Cybersecurity",
-                        "lectureDuration": 700,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": true,
-                        "lectureOrder": 1
-                    },
-                    {
-                        "lectureId": "lecture2",
-                        "lectureTitle": "Understanding Cyber Threats",
-                        "lectureDuration": 750,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": false,
-                        "lectureOrder": 2
-                    }
-                ]
-            },
-            {
-                "chapterId": "chapter2",
-                "chapterOrder": 2,
-                "chapterTitle": "Network Security Fundamentals",
-                "chapterContent": [
-                    {
-                        "lectureId": "lecture3",
-                        "lectureTitle": "Securing Networks",
-                        "lectureDuration": 800,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": true,
-                        "lectureOrder": 1
-                    },
-                    {
-                        "lectureId": "lecture4",
-                        "lectureTitle": "Firewalls and VPNs",
-                        "lectureDuration": 850,
-                        "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
-                        "isPreviewFree": false,
-                        "lectureOrder": 2
-                    }
-                ]
-            }
-        ],
-        "educator": "675ac1512100b91a6d9b8b24",
-        "enrolledStudents": [
-            "user_2qjlgkAqIMpiR2flWIRzvWKtE0w"
-        ],
-        "courseRatings": [],
-        "createdAt": "2024-12-17T08:16:53.622Z",
-        "updatedAt": "2025-01-02T06:56:13.208Z",
-        "__v": 1,
-        "courseThumbnail": "https://img.youtube.com/vi/WbV3zRgpw_E/maxresdefault.jpg"
-    }
+   
 ]

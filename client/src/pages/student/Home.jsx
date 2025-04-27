@@ -3,6 +3,8 @@ import Hero from '../../components/student/hero'
 import Companies from '../../components/student/companies'
 import CourceSection from '../../components/student/CourceSection'
 import TestimonialsSection from '../../components/student/TestimonialsSection'
+import CallToAction from '../../components/student/CallToAction'
+import Footer from '../../components/student/footer'
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <Companies />
       <CourceSection />
       <TestimonialsSection />
+      <CallToAction/>
+      <Footer/>
     </div>
   )
 }

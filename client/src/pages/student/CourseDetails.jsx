@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CourseDetails = () => {
+function CourseDetails() {
   return (
     <div>
-      <h1>CourseDetails Page</h1>
+      <h1>course detaails</h1>
     </div>
   )
 }
