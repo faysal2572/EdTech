@@ -7,6 +7,7 @@ export const AppContextProvider = (props)=>{
     const navigate= useNavigate() 
     const [allCourses,setallCourses] = useState([])
     const [isEducator,setisEducator] = useState(true)
+    const [enrolledCourses, setEnrolledCourses] = useState([])
 
 
     //fetch all courses
@@ -58,6 +59,23 @@ export const AppContextProvider = (props)=>{
             });
             return totalLectures;
         }
+        // Fetch User Enrolled Courses
+    const fetchUserEnrolledCourses = async () => {
+
+        const token = await getToken();
+
+        const { data } = await axios.get(backendUrl + '/api/user/enrolled-courses',
+            { headers: { Authorization: `Bearer ${token}` } })
+
+        if (data.success) {
+            setEnrolledCourses(data.enrolledCourses.reverse())
+        } else (
+            toast.error(data.message)
+        )
+
+    }
+
+       
     
 
     useEffect(()=>{
