@@ -268,3 +268,5 @@ const AddCourse = () => {
 };
 
 export default AddCourse;
+
+// add courses 
