@@ -9,9 +9,11 @@ import User from "../models/User.js";
 // API Controller Function to Manage Clerk User with database
 export const clerkWebhooks = async (req, res) => {
   try {
+    console.log('Webhook received:', req.headers);
 
     // Create a Svix instance with clerk webhook secret.
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
+    console.log('Webhook secret:', process.env.CLERK_WEBHOOK_SECRET);
 
     // Verifying Headers
     await whook.verify(JSON.stringify(req.body), {
@@ -22,6 +24,8 @@ export const clerkWebhooks = async (req, res) => {
 
     // Getting Data from request body
     const { data, type } = req.body
+    console.log('Webhook event type:', type);
+    console.log('Webhook data:', data);
 
     // Switch Cases for differernt Events
     switch (type) {
@@ -31,11 +35,12 @@ export const clerkWebhooks = async (req, res) => {
           _id: data.id,
           email: data.email_addresses[0].email_address,
           name: data.first_name + " " + data.last_name,
-          imageUrl: data.image_url,
+          imgUrl: data.image_url,
           resume: ''
         }
-        await User.create(userData)
-        res.json({})
+        const newUser = await User.create(userData)
+        console.log('User created in database:', newUser);
+        res.json({success: true})
         break;
       }
 
@@ -43,7 +48,7 @@ export const clerkWebhooks = async (req, res) => {
         const userData = {
           email: data.email_addresses[0].email_address,
           name: data.first_name + " " + data.last_name,
-          imageUrl: data.image_url,
+          imgUrl: data.image_url,
         }
         await User.findByIdAndUpdate(data.id, userData)
         res.json({})
@@ -60,6 +65,7 @@ export const clerkWebhooks = async (req, res) => {
     }
 
   } catch (error) {
+    console.error('Webhook error:', error);
     res.json({ success: false, message: error.message })
   }
 }
