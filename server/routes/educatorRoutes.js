@@ -15,3 +15,6 @@ educatorRouter.get('/dashboard', protectEducator, educatorDashboardData)
 
 
 export default educatorRouter
+
+// Get Educator Courses 
+educatorRouter.get('/courses', protectEducator, getEducatorCourses)
