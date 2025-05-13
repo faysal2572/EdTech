@@ -107,3 +107,39 @@ export const educatorDashboardData = async (req, res) => {
         res.json({ success: false, message: error.message });
     }
 };
+// Get Enrolled Students Data with Purchase Data
+export const getEnrolledStudentsData = async (req, res) => {
+    try {
+        const educator = req.auth.userId;
+
+        // Fetch all courses created by the educator
+        const courses = await Course.find({ educator });
+
+        // Get the list of course IDs
+        const courseIds = courses.map(course => course._id);
+
+        // Fetch purchases with user and course data
+        const purchases = await Purchase.find({
+            courseId: { $in: courseIds },
+            status: 'completed'
+        }).populate('userId', 'name imageUrl').populate('courseId', 'courseTitle');
+
+        // enrolled students data
+        const enrolledStudents = purchases.map(purchase => ({
+            student: purchase.userId,
+            courseTitle: purchase.courseId.courseTitle,
+            purchaseDate: purchase.createdAt
+        }));
+
+        res.json({
+            success: true,
+            enrolledStudents
+        });
+
+    } catch (error) {
+        res.json({
+            success: false,
+            message: error.message
+        });
+    }
+};
