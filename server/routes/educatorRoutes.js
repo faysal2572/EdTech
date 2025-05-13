@@ -14,6 +14,7 @@ educatorRouter.post('/add-course', upload.single('image'), protectEducator, addC
 educatorRouter.get('/dashboard', protectEducator, educatorDashboardData)
 // Get Educator Courses 
 educatorRouter.get('/courses', protectEducator, getEducatorCourses)
-
+// Get Educator Students Data
+educatorRouter.get('/enrolled-students', protectEducator, getEnrolledStudentsData)
 export default educatorRouter
 
