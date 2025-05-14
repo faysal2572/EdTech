@@ -8,14 +8,18 @@ const educatorRouter = express.Router()
 
 // Add Educator Role 
 educatorRouter.get('/update-role', updateRoleToEducator)
+
 // Add Courses 
 educatorRouter.post('/add-course', upload.single('image'), protectEducator, addCourse)
-// Get Educator Dashboard Data
-educatorRouter.get('/dashboard', protectEducator, educatorDashboardData)
+
 // Get Educator Courses 
 educatorRouter.get('/courses', protectEducator, getEducatorCourses)
+
+// Get Educator Dashboard Data
+educatorRouter.get('/dashboard', protectEducator, educatorDashboardData)
+
 // Get Educator Students Data
 educatorRouter.get('/enrolled-students', protectEducator, getEnrolledStudentsData)
 
-export default educatorRouter
 
+export default educatorRouter;
