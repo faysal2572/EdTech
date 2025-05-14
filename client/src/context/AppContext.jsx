@@ -1,29 +1,61 @@
-import { createContext, useEffect, useState} from "react";
-import { dummyCourses } from "../assets/assets";
+import axios from "axios";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth,useUser } from "@clerk/clerk-react";
+import { toast } from "react-toastify";
+import { useAuth, useUser } from "@clerk/clerk-react";
+import humanizeDuration from "humanize-duration";
 
 export const AppContext = createContext()
-export const AppContextProvider = (props)=>{
-    const currency =import.meta.env.VITE_CURRENCY  
-    const navigate= useNavigate() 
 
+export const AppContextProvider = (props) => {
+
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const currency = import.meta.env.VITE_CURRENCY
+
+    const navigate = useNavigate()
     const { getToken } = useAuth()
     const { user } = useUser()
 
-
-
-
-    const [allCourses,setallCourses] = useState([])
-    const [isEducator,setisEducator] = useState(true)
+    const [showLogin, setShowLogin] = useState(false)
+    const [isEducator,setIsEducator] = useState(false)
+    const [allCourses, setAllCourses] = useState([])
+    const [userData, setUserData] = useState(null)
     const [enrolledCourses, setEnrolledCourses] = useState([])
-    
+
 
 
     //fetch all courses
     const  fetchALLCourses = async()=>{
         setallCourses(dummyCourses)
     }
+
+
+     // Fetch UserData 
+    const fetchUserData = async () => {
+
+        try {
+
+            if (user.publicMetadata.role === 'educator') {
+                setIsEducator(true)
+            }
+
+            const token = await getToken();
+
+            const { data } = await axios.get(backendUrl + '/api/user/data',
+                { headers: { Authorization: `Bearer ${token}` } })
+
+            if (data.success) {
+                setUserData(data.user)
+            } else (
+                toast.error(data.message)
+            )
+
+        } catch (error) {
+            toast.error(error.message)
+        }
+
+    }
+    
     // function to calculate average rating
     const calculateRating = (course) => {
         if(course.courseRatings.length === 0){
@@ -85,14 +117,11 @@ export const AppContextProvider = (props)=>{
 
     }
 
-       
-    
-
     useEffect(()=>{
         fetchALLCourses()
     },[])
 
-    // Fetch User's Data if User is Logged In
+   // Fetch User's Data if User is Logged In
     useEffect(() => {
         if (user) {
             fetchUserData()
@@ -100,10 +129,15 @@ export const AppContextProvider = (props)=>{
         }
     }, [user])
 
-
     const value = {
-        currency , allCourses, navigate , calculateRating ,isEducator, setisEducator,
-        calculateChapterTime, calculateCourseDuration, calculateNoOfLectures
+        showLogin, setShowLogin,
+        backendUrl, currency, navigate,
+        userData, setUserData, getToken,
+        allCourses, fetchAllCourses,
+        enrolledCourses, fetchUserEnrolledCourses,
+        calculateChapterTime, calculateCourseDuration,
+        calculateRating, calculateNoOfLectures,
+        isEducator,setIsEducator
     }
 
     return (
@@ -111,4 +145,5 @@ export const AppContextProvider = (props)=>{
             {props.children}
         </AppContext.Provider>
     )
+
 }
