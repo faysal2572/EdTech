@@ -16,5 +16,6 @@ educatorRouter.get('/dashboard', protectEducator, educatorDashboardData)
 educatorRouter.get('/courses', protectEducator, getEducatorCourses)
 // Get Educator Students Data
 educatorRouter.get('/enrolled-students', protectEducator, getEnrolledStudentsData)
+
 export default educatorRouter
 
