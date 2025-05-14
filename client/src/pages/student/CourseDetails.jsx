@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import Footer from '../../components/student/footer';
 import { assets } from '../../assets/assets';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -8,7 +9,6 @@ import humanizeDuration from 'humanize-duration'
 import YouTube from 'react-youtube';
 import { useAuth } from '@clerk/clerk-react';
 import Loading from '../../components/student/Loading';
-import Footer from '../../components/student/footer'
 
 const CourseDetails = () => {
 
@@ -217,7 +217,7 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
-      < Footer/>
+      <Footer />
     </>
   ) : <Loading />
 };
