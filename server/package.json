@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/**/*.test.js --timeout 10000",
+    "test:watch": "mocha tests/**/*.test.js --watch --timeout 10000",
+    "test:standalone": "mocha tests/auth-standalone.test.js --timeout 10000",
     "server": "nodemon server.js",
     "start": "node server.js"
   },
@@ -23,5 +25,11 @@
     "nodemon": "^3.1.10",
     "stripe": "^18.1.0",
     "svix": "^1.42.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.2.2",
+    "sinon": "^20.0.0",
+    "supertest": "^7.1.1"
   }
 }
